@@ -1,0 +1,6 @@
+@ProjetoLotoFacil_HostAddress = http://localhost:5032
+
+GET {{ProjetoLotoFacil_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

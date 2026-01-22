@@ -1,0 +1,15 @@
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\bin\Debug\net8.0\Atendimento.Infrastructure.deps.json
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\bin\Debug\net8.0\Atendimento.Infrastructure.dll
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\bin\Debug\net8.0\Atendimento.Infrastructure.pdb
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\bin\Debug\net8.0\Atendimento.Domain.dll
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\bin\Debug\net8.0\Atendimento.Domain.pdb
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\Atendimento.Infrastructure.csproj.AssemblyReference.cache
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\Atendimento.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\Atendimento.Infrastructure.AssemblyInfoInputs.cache
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\Atendimento.Infrastructure.AssemblyInfo.cs
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\Atendimento.Infrastructure.csproj.CoreCompileInputs.cache
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\Atendime.100C0E42.Up2Date
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\Atendimento.Infrastructure.dll
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\refint\Atendimento.Infrastructure.dll
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\Atendimento.Infrastructure.pdb
+E:\New-GitHub\Dotnet\SistemaAtendimento\Atendimento.Infrastructure\obj\Debug\net8.0\ref\Atendimento.Infrastructure.dll

@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\New-GitHub\\Dotnet\\Financeiro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|e:\\new-github\\dotnet\\financeiro\\models\\categoriareceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|solutionrelative:models\\categoriareceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|e:\\new-github\\dotnet\\financeiro\\models\\categoriagastos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|solutionrelative:models\\categoriagastos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|e:\\new-github\\dotnet\\financeiro\\models\\gastos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|solutionrelative:models\\gastos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|e:\\new-github\\dotnet\\financeiro\\models\\receitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|solutionrelative:models\\receitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|e:\\new-github\\dotnet\\financeiro\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|e:\\new-github\\dotnet\\financeiro\\data\\financeirodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F900A20B-C9DD-43E0-B1CB-9EC6D56AC0C8}|Financeiro.csproj|solutionrelative:data\\financeirodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoriaReceitas.cs",
+              "DocumentMoniker": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\CategoriaReceitas.cs",
+              "RelativeDocumentMoniker": "Models\\CategoriaReceitas.cs",
+              "ToolTip": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\CategoriaReceitas.cs",
+              "RelativeToolTip": "Models\\CategoriaReceitas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T21:20:32.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoriaGastos.cs",
+              "DocumentMoniker": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\CategoriaGastos.cs",
+              "RelativeDocumentMoniker": "Models\\CategoriaGastos.cs",
+              "ToolTip": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\CategoriaGastos.cs",
+              "RelativeToolTip": "Models\\CategoriaGastos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T21:20:07.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Gastos.cs",
+              "DocumentMoniker": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\Gastos.cs",
+              "RelativeDocumentMoniker": "Models\\Gastos.cs",
+              "ToolTip": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\Gastos.cs",
+              "RelativeToolTip": "Models\\Gastos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T21:19:15.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Receitas.cs",
+              "DocumentMoniker": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\Receitas.cs",
+              "RelativeDocumentMoniker": "Models\\Receitas.cs",
+              "ToolTip": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\Receitas.cs",
+              "RelativeToolTip": "Models\\Receitas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T21:18:54.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "E:\\New-GitHub\\Dotnet\\Financeiro\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T21:18:27.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FinanceiroDbContext.cs",
+              "DocumentMoniker": "E:\\New-GitHub\\Dotnet\\Financeiro\\Data\\FinanceiroDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\FinanceiroDbContext.cs",
+              "ToolTip": "E:\\New-GitHub\\Dotnet\\Financeiro\\Data\\FinanceiroDbContext.cs",
+              "RelativeToolTip": "Data\\FinanceiroDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T21:16:39.654Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
