@@ -1,0 +1,158 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.API\\MyRecipentBook.API.csproj": {}
+  },
+  "projects": {
+    "E:\\New-GitHub\\MeuLivrodeReceita\\MyRecipientBook.Exceptions\\MyRecipientBook.Exceptions.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\New-GitHub\\MeuLivrodeReceita\\MyRecipientBook.Exceptions\\MyRecipientBook.Exceptions.csproj",
+        "projectName": "MyRecipientBook.Exceptions",
+        "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\MyRecipientBook.Exceptions\\MyRecipientBook.Exceptions.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.API\\MyRecipentBook.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.API\\MyRecipentBook.API.csproj",
+        "projectName": "MyRecipentBook.API",
+        "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.API\\MyRecipentBook.API.csproj",
+        "packagesPath": "C:\\Users\\pc-home\\.nuget\\packages\\",
+        "outputPath": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc-home\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\New-GitHub\\MeuLivrodeReceita\\MyRecipientBook.Exceptions\\MyRecipientBook.Exceptions.csproj": {
+                "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\MyRecipientBook.Exceptions\\MyRecipientBook.Exceptions.csproj"
+              },
+              "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.Application\\MyRecipentBook.Application.csproj": {
+                "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.Application\\MyRecipentBook.Application.csproj"
+              },
+              "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Shared\\MyRecipientBook.Communication\\MyRecipientBook.Communication.csproj": {
+                "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Shared\\MyRecipientBook.Communication\\MyRecipientBook.Communication.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.Application\\MyRecipentBook.Application.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.Application\\MyRecipentBook.Application.csproj",
+        "projectName": "MyRecipentBook.Application",
+        "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipentBook.Application\\MyRecipentBook.Application.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "E:\\New-GitHub\\MeuLivrodeReceita\\MyRecipientBook.Exceptions\\MyRecipientBook.Exceptions.csproj": {
+                "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\MyRecipientBook.Exceptions\\MyRecipientBook.Exceptions.csproj"
+              },
+              "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipientBook.Domain\\MyRecipientBook.Domain.csproj": {
+                "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipientBook.Domain\\MyRecipientBook.Domain.csproj"
+              },
+              "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Shared\\MyRecipientBook.Communication\\MyRecipientBook.Communication.csproj": {
+                "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Shared\\MyRecipientBook.Communication\\MyRecipientBook.Communication.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipientBook.Domain\\MyRecipientBook.Domain.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipientBook.Domain\\MyRecipientBook.Domain.csproj",
+        "projectName": "MyRecipientBook.Domain",
+        "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Backend\\MyRecipientBook.Domain\\MyRecipientBook.Domain.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Shared\\MyRecipientBook.Communication\\MyRecipientBook.Communication.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Shared\\MyRecipientBook.Communication\\MyRecipientBook.Communication.csproj",
+        "projectName": "MyRecipientBook.Communication",
+        "projectPath": "E:\\New-GitHub\\MeuLivrodeReceita\\src\\Shared\\MyRecipientBook.Communication\\MyRecipientBook.Communication.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}

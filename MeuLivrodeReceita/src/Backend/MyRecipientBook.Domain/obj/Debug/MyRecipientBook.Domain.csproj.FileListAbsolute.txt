@@ -1,0 +1,10 @@
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\bin\Debug\MyRecipientBook.Domain.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\bin\Debug\MyRecipientBook.Domain.pdb
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\bin\Debug\Microsoft.Analytics.Interfaces.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\bin\Debug\Microsoft.Analytics.Types.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\obj\Debug\MyRecipientBook.Domain.csproj.AssemblyReference.cache
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\obj\Debug\MyRecipientBook.Domain.csproj.CoreCompileInputs.cache
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\obj\Debug\MyRecipi.E52EB489.Up2Date
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\obj\Debug\MyRecipientBook.Domain.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipientBook.Domain\obj\Debug\MyRecipientBook.Domain.pdb

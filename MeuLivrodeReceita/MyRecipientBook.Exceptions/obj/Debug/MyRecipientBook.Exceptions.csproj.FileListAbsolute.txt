@@ -1,0 +1,10 @@
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\bin\Debug\MyRecipientBook.Exceptions.dll
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\bin\Debug\MyRecipientBook.Exceptions.pdb
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\bin\Debug\Microsoft.Analytics.Interfaces.dll
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\bin\Debug\Microsoft.Analytics.Types.dll
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\obj\Debug\MyRecipientBook.Exceptions.csproj.AssemblyReference.cache
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\obj\Debug\MyRecipientBook.Exceptions.csproj.CoreCompileInputs.cache
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\obj\Debug\MyRecipi.368B899D.Up2Date
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\obj\Debug\MyRecipientBook.Exceptions.dll
+E:\New-GitHub\MeuLivrodeReceita\MyRecipientBook.Exceptions\obj\Debug\MyRecipientBook.Exceptions.pdb

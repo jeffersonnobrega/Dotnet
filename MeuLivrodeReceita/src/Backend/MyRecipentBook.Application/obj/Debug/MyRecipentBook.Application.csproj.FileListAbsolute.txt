@@ -1,0 +1,16 @@
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\MyRecipentBook.Application.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\MyRecipentBook.Application.pdb
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\Microsoft.Analytics.Interfaces.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\Microsoft.Analytics.Types.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\MyRecipientBook.Communication.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\MyRecipientBook.Domain.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\MyRecipientBook.Exceptions.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\MyRecipientBook.Exceptions.pdb
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\MyRecipientBook.Communication.pdb
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\bin\Debug\MyRecipientBook.Domain.pdb
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\obj\Debug\MyRecipentBook.Application.csproj.AssemblyReference.cache
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\obj\Debug\MyRecipentBook.Application.csproj.CoreCompileInputs.cache
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\obj\Debug\MyRecipe.9BF0197D.Up2Date
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\obj\Debug\MyRecipentBook.Application.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Backend\MyRecipentBook.Application\obj\Debug\MyRecipentBook.Application.pdb

@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "MyRecipentBook.API.Controllers.UserController",
+    "Method": "Register",
+    "RelativePath": "User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MyRecipientBook.Communication.Request.RequestRegisterUserJson",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

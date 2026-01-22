@@ -1,0 +1,10 @@
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\bin\Debug\MyRecipientBook.Communication.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\bin\Debug\MyRecipientBook.Communication.pdb
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\bin\Debug\Microsoft.Analytics.Interfaces.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\bin\Debug\Microsoft.Analytics.Types.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\obj\Debug\MyRecipientBook.Communication.csproj.AssemblyReference.cache
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\obj\Debug\MyRecipientBook.Communication.csproj.CoreCompileInputs.cache
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\obj\Debug\MyRecipi.29D0ED2B.Up2Date
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\obj\Debug\MyRecipientBook.Communication.dll
+E:\New-GitHub\MeuLivrodeReceita\src\Shared\MyRecipientBook.Communication\obj\Debug\MyRecipientBook.Communication.pdb
