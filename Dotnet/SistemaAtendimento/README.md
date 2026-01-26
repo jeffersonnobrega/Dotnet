@@ -1,5 +1,5 @@
 # 🎫 Sistema de Atendimento (Core API)
---
+
 Este projeto é uma API robusta de gerenciamento de tickets de atendimento, construída com foco em escalabilidade, testabilidade e separação de preocupações. O sistema demonstra a aplicação prática de padrões de projeto modernos no ecossistema .NET.
 
 ## 🛠️ Stack Tecnológica
