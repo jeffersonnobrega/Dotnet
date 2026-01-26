@@ -37,20 +37,21 @@ Durante o desenvolvimento, foram aplicadas soluções para problemas reais de so
 
 - Segurança de Tipos: Uso de Nullable Types e Enumerators para evitar erros de referência nula e estados inválidos no banco de dados.
 
-🚀 Como Executar
-Bash
-# 1. Clone o repositório
+## 🚀 Como Executar
+
+### 1. Clone o repositório
 git clone https://github.com/seu-usuario/sistema-atendimento-gdf.git
 
-# 2. Restaure os pacotes
+#### 2. Restaure os pacotes
 dotnet restore
 
-# 3. Atualize o banco de dados (Migrations)
+### 3. Atualize o banco de dados (Migrations)
 dotnet ef database update --project Atendimento.Infrastructure --startup-project Atendimento.Api
 
-# 4. Rode a aplicação
+### 4. Rode a aplicação
 dotnet run --project Atendimento.Api
-🚧 Roadmap de Desenvolvimento
+
+## 🚧 Roadmap de Desenvolvimento
 [x] Estrutura base de Domínio e Entidades.
 
 [x] Implementação do Entity Framework e Migrations.
