@@ -1,40 +1,41 @@
-🎫 Sistema de Atendimento (Core API)
+##🎫 Sistema de Atendimento (Core API)
+--
 Este projeto é uma API robusta de gerenciamento de tickets de atendimento, construída com foco em escalabilidade, testabilidade e separação de preocupações. O sistema demonstra a aplicação prática de padrões de projeto modernos no ecossistema .NET.
 
-🛠️ Stack Tecnológica
-Linguagem: C# 12 / .NET 8
+## 🛠️ Stack Tecnológica
+- Linguagem: C# 12 / .NET 8
 
-Banco de Dados: SQL Server
+- Banco de Dados: SQL Server
 
-ORM: Entity Framework Core 8
+- ORM: Entity Framework Core 8
 
-Documentação: Swagger/OpenAPI
+- Documentação: Swagger/OpenAPI
 
-Padrões de Projeto: * Repository Pattern: Desacoplamento da lógica de persistência.
+- Padrões de Projeto: * Repository Pattern: Desacoplamento da lógica de persistência.
 
-Service Layer: Centralização das regras de negócio.
+- Service Layer: Centralização das regras de negócio.
 
-Injeção de Dependência: Gerenciamento de ciclo de vida de objetos.
+- Injeção de Dependência: Gerenciamento de ciclo de vida de objetos.
 
-Async/Await: Processamento assíncrono de ponta a ponta para alta performance.
+- Async/Await: Processamento assíncrono de ponta a ponta para alta performance.
 
-🏗️ Arquitetura do Sistema
+## 🏗️ Arquitetura do Sistema
 O projeto segue os princípios da Clean Architecture, dividido em camadas de responsabilidade única:
 
-Domain: O coração do sistema. Contém Entidades, Interfaces (Contratos) e Enums. É 100% independente de bibliotecas externas de banco de dados.
+- Domain: O coração do sistema. Contém Entidades, Interfaces (Contratos) e Enums. É 100% independente de bibliotecas externas de banco de dados.
 
-Infrastructure: Implementação técnica. Aqui reside o AppDbContext e os Repositories que traduzem as necessidades do domínio em comandos SQL.
+- Infrastructure: Implementação técnica. Aqui reside o AppDbContext e os Repositories que traduzem as necessidades do domínio em comandos SQL.
 
-API: A porta de entrada. Responsável pelo roteamento, documentação Swagger e exposição dos Endpoints.
+- API: A porta de entrada. Responsável pelo roteamento, documentação Swagger e exposição dos Endpoints.
 
-📈 Evolução Técnica (Destaques)
+## 📈 Evolução Técnica (Destaques)
 Durante o desenvolvimento, foram aplicadas soluções para problemas reais de software:
 
-Identificadores Híbridos: Uso de Guid para segurança interna e geração de Protocolos Amigáveis (ex: REQ-2026-A1B2) para o usuário final.
+- Identificadores Híbridos: Uso de Guid para segurança interna e geração de Protocolos Amigáveis (ex: REQ-2026-A1B2) para o usuário final.
 
-Abstração de Dados: Implementação de Interfaces (ITicketRepository) que permitem a troca de provedores de dados sem afetar a lógica de negócio.
+- Abstração de Dados: Implementação de Interfaces (ITicketRepository) que permitem a troca de provedores de dados sem afetar a lógica de negócio.
 
-Segurança de Tipos: Uso de Nullable Types e Enumerators para evitar erros de referência nula e estados inválidos no banco de dados.
+- Segurança de Tipos: Uso de Nullable Types e Enumerators para evitar erros de referência nula e estados inválidos no banco de dados.
 
 🚀 Como Executar
 Bash
