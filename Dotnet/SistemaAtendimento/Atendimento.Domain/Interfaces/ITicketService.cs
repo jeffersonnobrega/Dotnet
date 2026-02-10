@@ -1,3 +1,4 @@
+using Atendimento.Domain.DTOs;
 using Atendimento.Domain.Entities;
 
 namespace Atendimento.Domain.Interfaces
@@ -8,7 +9,7 @@ namespace Atendimento.Domain.Interfaces
 
         Task<Ticket?>BuscarTicketPorIdAsync(Guid Id);
 
-        Task<Ticket>CriarTicketAsync(Ticket ticket);
+        Task<Ticket>CriarTicketAsync(TicketCreateDto ticketCreateDto);
 
 
     }

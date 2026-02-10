@@ -1,5 +1,6 @@
 using Atendimento.Domain.Interfaces;
 using Atendimento.Domain.Entities;
+using Atendimento.Domain.DTOs;
 
 namespace Atendimento.Domain.Services
 {
@@ -17,14 +18,20 @@ namespace Atendimento.Domain.Services
             return await _repository.ObterPorIdAsync(Id);
         }
 
-        public async Task<Ticket> CriarTicketAsync(Ticket ticket)
+        public async Task<Ticket> CriarTicketAsync(TicketCreateDto ticketCreateDto)
         {
-            ticket.Id = Guid.NewGuid();
-            
-            ticket.NumeroProtocolo = $"REQ-{DateTime.Now.Year}-{Guid.NewGuid().ToString().Substring(0, 4).ToUpper()}";
-            ticket.DataCriacao = DateTime.Now;
-            ticket.Status = Enums.StatusAtendimento.Aberto;
-            return await _repository.AdicionarAsync(ticket);
+           var ticket = new Ticket
+           {
+               Id = Guid.NewGuid(),
+               NumeroProtocolo = $"REQ-{DateTime.Now.Year}-{Guid.NewGuid().ToString().Substring(0, 4).ToUpper()}",
+               Titulo = ticketCreateDto.Titulo,
+               Descricao = ticketCreateDto.Descricao,
+               DataCriacao = DateTime.Now,
+               CpfCnpjCliente = ticketCreateDto.CpfCnpjCliente,
+               Status = Enums.StatusAtendimento.Aberto,
+           };
+
+           return await _repository.AdicionarAsync(ticket);
         }
 
         public async Task<IEnumerable<Ticket>> ListarTicketsAsync()
