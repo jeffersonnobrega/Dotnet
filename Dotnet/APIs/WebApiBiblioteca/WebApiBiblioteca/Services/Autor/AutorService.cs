@@ -94,7 +94,7 @@ namespace WebApiBiblioteca.Services.Autor
             }
         }
 
-        public async Task <ResponseModel<List<AutorModel>>> EditarAutor(AutorEdicaoDto autorEdicaoDto)
+        public async Task <ResponseModel<List<AutorModel>>> ExcluirAutor(int idAutor)
         {
             ResponseModel<List<AutorModel>> resposta = new ResponseModel<List<AutorModel>>();
 
@@ -102,6 +102,22 @@ namespace WebApiBiblioteca.Services.Autor
             {
                 var autor = await _context.Autores
                     .FirstOrDefaultAsync(autorBanco => autorBanco.Id == idAutor);
+
+                if (autor == null)
+                {
+                    resposta.Mensagem = "Nenhum autor localizado";
+                    return resposta;
+
+                }
+
+                _context.Remove(autor);
+                await _context.SaveChangesAsync();
+
+                resposta.Dados = await _context.Autores.ToListAsync();
+
+                resposta.Mensagem = "Autor removido com sucesso";
+                return resposta;
+
             }
             catch (Exception ex)
             {
@@ -111,9 +127,41 @@ namespace WebApiBiblioteca.Services.Autor
             }
         }
 
-        public Task<ResponseModel<List<AutorModel>>> ExcluirAutor(int IdAutor)
+        public async Task<ResponseModel<List<AutorModel>>> EditarAutor(AutorEdicaoDto autorEdicaoDto)
         {
-            throw new NotImplementedException();
+            ResponseModel<List<AutorModel>> resposta = new ResponseModel<List<AutorModel>>();
+
+            try
+            {
+                var autor = await _context.Autores
+                    .FirstOrDefaultAsync(autorBanco => autorBanco.Id == autorEdicaoDto.Id);
+
+                if (autor == null)
+                {
+                    resposta.Mensagem = "Nenhum autor localizado";
+                    return resposta;
+
+                }
+
+                autor.Nome = autorEdicaoDto.Nome;
+                autor.Sobrenome = autorEdicaoDto.Sobrenome;
+
+                _context.Update(autor);
+                await _context.SaveChangesAsync();
+
+                resposta.Dados = await _context.Autores.ToListAsync();
+                resposta.Mensagem = "Autor editado com sucesso";
+
+                return resposta;
+
+            }
+
+            catch (Exception ex)
+            {
+                resposta.Mensagem = ex.Message;
+                resposta.Status = false;
+                return resposta;
+            }
         }
 
         public async Task<ResponseModel<List<AutorModel>>> ListarAutores()
@@ -134,5 +182,7 @@ namespace WebApiBiblioteca.Services.Autor
                 return resposta;
             }
         }
+
+     
     }
 }

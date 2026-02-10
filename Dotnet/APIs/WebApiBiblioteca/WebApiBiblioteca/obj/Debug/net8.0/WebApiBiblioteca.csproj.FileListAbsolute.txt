@@ -134,3 +134,4 @@ E:\New-GitHub\Dotnet\APIs\WebApiBiblioteca\WebApiBiblioteca\obj\Debug\net8.0\ref
 E:\New-GitHub\Dotnet\APIs\WebApiBiblioteca\WebApiBiblioteca\obj\Debug\net8.0\WebApiBiblioteca.pdb
 E:\New-GitHub\Dotnet\APIs\WebApiBiblioteca\WebApiBiblioteca\obj\Debug\net8.0\WebApiBiblioteca.genruntimeconfig.cache
 E:\New-GitHub\Dotnet\APIs\WebApiBiblioteca\WebApiBiblioteca\obj\Debug\net8.0\ref\WebApiBiblioteca.dll
+E:\New-GitHub\Dotnet\APIs\WebApiBiblioteca\WebApiBiblioteca\obj\Debug\net8.0\WebApiBiblioteca.sourcelink.json
