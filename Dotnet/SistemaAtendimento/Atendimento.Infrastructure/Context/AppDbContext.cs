@@ -9,7 +9,7 @@ public class AppDbContext : DbContext
     {
     }
 
-    public DbSet<Ticket> Tickets { get; set; } // O erro está aqui!
+    public DbSet<Ticket> Tickets { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

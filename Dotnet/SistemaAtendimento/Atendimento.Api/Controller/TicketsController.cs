@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Atendimento.Domain.Entities;
 using Atendimento.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
+using Atendimento.Domain.Interfaces;
 
 namespace Atendimento.Api.Controllers
 {
@@ -10,25 +11,25 @@ namespace Atendimento.Api.Controllers
 
     public class TicketsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly ITicketService _ticketService ;
 
-        public TicketsController(AppDbContext context)
+        public TicketsController(ITicketService ticketService)
         {
-            _context = context;
+            _ticketService = ticketService;
         }
 
         [HttpGet]
         public async Task<IActionResult> BuscarTodosTickets()
         {
-            var tickets = await _context.Tickets.ToListAsync();
+            var tickets = await _ticketService.ListarTicketsAsync();
             return Ok(tickets);
         }
 
         
         [HttpGet("{id}")]
-        public async Task<IActionResult> BuscarTicketPorId(int id)
+        public async Task<IActionResult> BuscarTicketPorId(Guid id)
         {
-            var ticketId = await _context.Tickets.FindAsync(id);
+            var ticketId = await _ticketService.BuscarTicketPorIdAsync(id);
             
             if (ticketId == null)
                    return NotFound();
@@ -40,16 +41,9 @@ namespace Atendimento.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> AdicionarTicket(Ticket ticket)
         {
-            _context.Tickets.Add(ticket);
+           var novoTicket= await _ticketService.CriarTicketAsync(ticket);
 
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction
-            (
-                nameof(BuscarTicketPorId),
-                new {id = ticket.Id},
-                ticket
-            );
+            return Ok(novoTicket); 
         }
     }
 }

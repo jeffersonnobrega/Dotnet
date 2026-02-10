@@ -8,6 +8,7 @@ namespace Atendimento.Domain.Entities{
     public class Ticket
     {
         public Guid Id { get; set; } = Guid.NewGuid();
+        public string? NumeroProtocolo { get; set; } = string.Empty;
         public string Titulo { get; set; }
         public string Descricao { get; set; }
         public DateTime DataCriacao { get; set; } = DateTime.Now;
