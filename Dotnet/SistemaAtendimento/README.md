@@ -11,31 +11,35 @@ Este projeto é uma API robusta de gerenciamento de tickets de atendimento, cons
 
 - Documentação: Swagger/OpenAPI
 
-- Padrões de Projeto: * Repository Pattern: Desacoplamento da lógica de persistência.
+- Padrões de Projeto: 
 
-- Service Layer: Centralização das regras de negócio.
+  - Repository Pattern: Desacoplamento total da persistência.
 
-- Injeção de Dependência: Gerenciamento de ciclo de vida de objetos.
+  - Service Layer: Centralização de regras de negócio e tratamento de exceções.
 
-- Async/Await: Processamento assíncrono de ponta a ponta para alta performance.
+  - Data Transfer Objects (DTOs): Proteção das entidades de domínio e contratos de entrada/saída limpos.
+
+  - Response Pattern: Padronização de retornos da API com envelopes de status e mensagens.
 
 ## 🏗️ Arquitetura do Sistema
 O projeto segue os princípios da Clean Architecture, dividido em camadas de responsabilidade única:
 
-- Domain: O coração do sistema. Contém Entidades, Interfaces (Contratos) e Enums. É 100% independente de bibliotecas externas de banco de dados.
+- Domínio: Entidades, Interfaces e Enums (100% independente).
 
-- Infrastructure: Implementação técnica. Aqui reside o AppDbContext e os Repositories que traduzem as necessidades do domínio em comandos SQL.
+- Serviços: Orquestração da lógica, validações e mapeamento de dados.
 
-- API: A porta de entrada. Responsável pelo roteamento, documentação Swagger e exposição dos Endpoints.
+- Infraestrutura: AppDbContext, Migrations e implementação dos Repositórios via EF Core.
+
+- API: Controllers enxutos, roteamento inteligente e injeção de dependência.
 
 ## 📈 Evolução Técnica (Destaques)
 Durante o desenvolvimento, foram aplicadas soluções para problemas reais de software:
 
-- Identificadores Híbridos: Uso de Guid para segurança interna e geração de Protocolos Amigáveis (ex: REQ-2026-A1B2) para o usuário final.
+- Filtros Especializados: Implementação de busca por StatusAtendimento via parâmetros de rota, otimizando consultas via LINQ com Where e preparando a base para Include (Eager Loading).
 
-- Abstração de Dados: Implementação de Interfaces (ITicketRepository) que permitem a troca de provedores de dados sem afetar a lógica de negócio.
+- Tratamento de Erros Robusto: Uso de blocos try-catch na camada de serviço, encapsulando falhas em um objeto de resposta amigável para o cliente.
 
-- Segurança de Tipos: Uso de Nullable Types e Enumerators para evitar erros de referência nula e estados inválidos no banco de dados.
+- Model Binding Avançado: Conversão automática de strings/inteiros da URL para Enums do C#.
 
 ## 🚀 Como Executar
 
@@ -52,12 +56,16 @@ dotnet ef database update --project Atendimento.Infrastructure --startup-project
 dotnet run --project Atendimento.Api
 
 ## 🚧 Roadmap de Desenvolvimento
-[x] Estrutura base de Domínio e Entidades.
+- [x] Estrutura base de Domínio e Entidades.
 
-[x] Implementação do Entity Framework e Migrations.
+- [x] Implementação do Entity Framework e Migrações.
 
-[x] Desenvolvimento do Repository Pattern.
+- [x] Desenvolvimento do Padrão de Repositório.
 
-[ ] Conclusão da Camada de Serviço (Próximo passo).
+- [x] Conclusão da Camada de Serviço e Lógica de Negócio.
 
-[ ] Implementação de DTOs para proteção de entradas.
+- [x] Implementação de DTOs para proteção de dados.
+
+- [ ] Implementação de Relacionamentos (Clientes/Atendentes).
+
+- [ ] Sistema de Auditoria de Status (Log de mudanças).
