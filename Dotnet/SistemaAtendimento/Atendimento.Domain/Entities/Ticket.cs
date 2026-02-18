@@ -12,7 +12,12 @@ namespace Atendimento.Domain.Entities{
         public string Titulo { get; set; }
         public string Descricao { get; set; }
         public DateTime DataCriacao { get; set; } = DateTime.Now;
-        public string CpfCnpjCliente { get; set;}
+        public DateTime DataAlteracao { get; set; } = DateTime.Now;
+        public DateTime DataFechamento { get; set; } 
+        public int ClienteId { get; set; }
+        public Cliente Cliente{ get; set; }
+        public int AgenteId { get; set; }
+        public Agente Agente{ get; set; }
         public StatusAtendimento Status { get; set; }
 
     }
