@@ -1,15 +1,22 @@
 using Atendimento.Domain.DTOs;
 using Atendimento.Domain.Entities;
+using Atendimento.Domain.Enums;
 
 namespace Atendimento.Domain.Interfaces
 {
     public interface ITicketService
     {
-        Task<IEnumerable<Ticket>>ListarTicketsAsync();
+        Task<Response<List<Ticket>>> ListarTicketsAsync();
 
-        Task<Ticket?>BuscarTicketPorIdAsync(Guid Id);
+        Task<Response<List<Ticket>>> ListarTicketsPorStatusAsync(StatusAtendimento status);
 
-        Task<Ticket>CriarTicketAsync(TicketCreateDto ticketCreateDto);
+        Task<Response<Ticket>>ListarTicketPorIdAsync(Guid Id);
+
+        Task<Response<Ticket>>CriarTicketAsync(TicketCreateDto ticketCreateDto);
+
+        Task<Response<Ticket>>EditarTicketAsync(TicketEditDto ticketEditDto);
+
+        Task<Response<Ticket>>EditarStatusTicketAsync(TicketStatusUpdateDto ticketStatusUpdateDto);
 
 
     }

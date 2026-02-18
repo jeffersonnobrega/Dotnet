@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Atendimento.Domain.Entities;
 using Atendimento.Infrastructure.Context;
 using Atendimento.Domain.Interfaces;
+using Atendimento.Domain.Enums;
 
 namespace Atendimento.Infrastructure.Repository
 {
@@ -14,7 +15,7 @@ namespace Atendimento.Infrastructure.Repository
             _context = context;
         }
 
-        public async Task<IEnumerable<Ticket>> ObterTodosAsync()
+        public async Task<List<Ticket>> ObterTodosAsync()
         {
                return await _context.Tickets.ToListAsync(); 
 
@@ -36,7 +37,29 @@ namespace Atendimento.Infrastructure.Repository
             return ticket;
         }
 
+        public async Task<Ticket> EditarTicketAsync(Ticket ticket)
+        {
+            _context.Tickets.Update(ticket);
+            await _context.SaveChangesAsync();
 
-        
+            return ticket;
+
+        }
+
+        public async Task<Ticket> EditarStatusAsync(Ticket ticket)
+        {
+            _context.Tickets.Update(ticket);
+            await _context.SaveChangesAsync();
+
+            return ticket;
+        }
+
+        public async Task<List<Ticket>> ObterPorStatusAsync(StatusAtendimento status)
+        {
+            return await _context.Tickets
+                .Where(t => t.Status == status)
+                .ToListAsync();
+        }
     }
+    
 }

@@ -18,6 +18,8 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Ticket>(entity => {
             entity.Property(t => t.CpfCnpjCliente).IsRequired().HasMaxLength(20);
             entity.Property(t => t.Titulo).IsRequired().HasMaxLength(100);
+            entity.Property(t => t.Status).HasConversion<string>();
+            entity.Property(t => t.DataCriacao).HasDefaultValueSql("GETDATE()");
         });
     }
 }

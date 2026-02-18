@@ -1,15 +1,20 @@
 using Atendimento.Domain.Entities;
+using Atendimento.Domain.Enums;
 
 namespace Atendimento.Domain.Interfaces
 {
     public interface ITicketRepository
     {
-        // O termo "Listar" é de negócio, o Repository costuma usar "Obter" ou "Get"
-        Task<IEnumerable<Ticket>> ObterTodosAsync();
+        Task<List<Ticket>> ObterTodosAsync();
 
         Task<Ticket?> ObterPorIdAsync(Guid id);
 
-        // O termo "Criar" é de negócio, o Repository usa "Adicionar" ou "Add"
-        Task<Ticket> AdicionarAsync(Ticket ticket);
+        Task<List<Ticket>> ObterPorStatusAsync(StatusAtendimento status);
+
+       Task<Ticket> AdicionarAsync(Ticket ticket);
+
+        Task<Ticket> EditarTicketAsync(Ticket ticket);
+
+        Task<Ticket> EditarStatusAsync(Ticket ticket);
     }
 }
