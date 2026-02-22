@@ -59,7 +59,6 @@ namespace Atendimento.Domain.Services
                     Titulo = ticketCreateDto.Titulo,
                     Descricao = ticketCreateDto.Descricao,
                     DataCriacao = DateTime.Now,
-                    CpfCnpjCliente = ticketCreateDto.CpfCnpjCliente,
                     Status = Enums.StatusAtendimento.Aberto,
                 };
 
