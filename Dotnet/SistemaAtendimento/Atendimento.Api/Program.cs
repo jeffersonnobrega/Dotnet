@@ -18,6 +18,7 @@ builder.Services.AddDbContext<Atendimento.Infrastructure.Context.AppDbContext>(o
 
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 builder.Services.AddScoped<ITicketService, TicketService>();
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
 var app = builder.Build();
 

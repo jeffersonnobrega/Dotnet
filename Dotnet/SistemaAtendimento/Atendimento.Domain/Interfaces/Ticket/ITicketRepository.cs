@@ -16,5 +16,6 @@ namespace Atendimento.Domain.Interfaces
         Task<Ticket> EditarTicketAsync(Ticket ticket);
 
         Task<Ticket> EditarStatusAsync(Ticket ticket);
+
     }
 }

@@ -8,10 +8,12 @@ namespace Atendimento.Domain.Services
     public class TicketService: ITicketService
     {
         private readonly ITicketRepository _repository;
+        private readonly IClienteRepository _clienteRepository;
 
-        public TicketService (ITicketRepository ticketRepository)
+        public TicketService (ITicketRepository ticketRepository, IClienteRepository clienteRepository)
         {
             _repository = ticketRepository;
+            _clienteRepository = clienteRepository;
         }
 
         public async Task<Response<Ticket>> ListarTicketPorIdAsync(Guid Id)
@@ -52,17 +54,33 @@ namespace Atendimento.Domain.Services
 
             try
             {
-                var ticket = new Ticket
+                var clienteExistente = await _clienteRepository.ObterClientePorCpfAsync(ticketCreateDto.Cliente.CpfCnpjCliente);
+
+                if (clienteExistente == null)
                 {
+                    clienteExistente = new Cliente
+                    {
+                        Nome = ticketCreateDto.Cliente.Nome,
+                        CpfCnpjCliente  = ticketCreateDto.Cliente.CpfCnpjCliente,
+                        DepartamentoId  = ticketCreateDto.Cliente.DepartamentoId,
+                    }; 
+
+                    await _clienteRepository.AdicionarClienteAsync(clienteExistente); 
+                } 
+                
+                var ticket = new Ticket
+                    {
                     Id = Guid.NewGuid(),
                     NumeroProtocolo = $"REQ-{DateTime.Now.Year}-{Guid.NewGuid().ToString().Substring(0, 4).ToUpper()}",
+                    ClienteId = clienteExistente.Id,
                     Titulo = ticketCreateDto.Titulo,
                     Descricao = ticketCreateDto.Descricao,
                     DataCriacao = DateTime.Now,
                     Status = Enums.StatusAtendimento.Aberto,
-                };
+                    };       
 
-            await _repository.AdicionarAsync(ticket);
+
+                await _repository.AdicionarAsync(ticket);
 
                 resposta.Mensagem = "Ticket criado com sucesso.";
                 resposta.Dados = ticket;
