@@ -10,5 +10,7 @@ public interface IClienteService
     Task<Response<List<ClienteResponseDto>>> ListarClientesAsync();    
     Task<Response<ClienteResponseDto>> DesativarClienteAsync(int id);
     Task<Response<ClienteResponseDto>> ExcluirClienteAsync(int id);
+    Task<Response<ClienteResponseDto>> ListarClientePorCnpjAsync(string CpfCnpjCliente);
+    Task<Response<ClienteResponseDto>> ListarClientePorIdAsync (int id);
 
 }

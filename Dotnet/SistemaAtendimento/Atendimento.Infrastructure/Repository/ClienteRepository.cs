@@ -22,7 +22,7 @@ public class ClienteRepository : IClienteRepository
         return cliente;
     }
 
-    public Task AtualizarClienteAsync(Cliente cliente)
+    public Task<Cliente> EditarClienteAsync(Cliente cliente)
     {
         throw new NotImplementedException();
     }
@@ -38,6 +38,16 @@ public class ClienteRepository : IClienteRepository
     }
 
     public Task<Cliente?> ObterClientePorIdAsync(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    Task<Cliente> IClienteRepository.AtualizarClienteAsync(Cliente cliente)
+    {
+        throw new NotImplementedException();
+    }
+
+    Task<Cliente> IClienteRepository.ExcluirClienteAsync(Cliente cliente)
     {
         throw new NotImplementedException();
     }

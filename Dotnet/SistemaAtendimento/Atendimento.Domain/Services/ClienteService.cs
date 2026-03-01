@@ -16,7 +16,22 @@ public class ClienteService : IClienteService
         throw new NotImplementedException();
     }
 
+    public Task<Response<ClienteResponseDto>> EditarClienteAsync(ClienteCreateDto clienteCreateDto)
+    {
+        throw new NotImplementedException();
+    }
+
     public Task<Response<ClienteResponseDto>> ExcluirClienteAsync(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Response<ClienteResponseDto>> ListarClientePorCnpjAsync(string CpfCnpjCliente)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Response<ClienteResponseDto>> ListarClientePorIdAsync(int id)
     {
         throw new NotImplementedException();
     }
