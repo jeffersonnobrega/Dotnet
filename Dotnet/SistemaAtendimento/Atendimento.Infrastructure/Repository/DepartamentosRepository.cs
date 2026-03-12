@@ -1,0 +1,42 @@
+using Atendimento.Domain.Entities;
+using Atendimento.Domain.Interfaces;
+using Atendimento.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
+
+namespace Atendimento.Infrastructure.Repository;
+
+public class DepartamentosRepository : IDepartamentoRepository
+{
+    private readonly AppDbContext _context;
+
+    public DepartamentosRepository(AppDbContext context)
+    {
+        _context = context;
+    }
+    public async Task<Departamentos> AdicionarDepartamento(Departamentos departamentos)
+    {
+        _context.Departamentos.Add(departamentos);
+        await _context.SaveChangesAsync();
+        return departamentos;
+    }
+
+    public async Task<Departamentos?> ObterDepartamentoPorCodEquipe(string codDepartamento)
+    {
+        return await _context.Departamentos.FirstOrDefaultAsync(c => c.CodDepartamento == codDepartamento);
+    }
+
+    public async Task<Departamentos?> ObterDepartamentoPorIdAsync(int idDepartamento)
+    {
+        return await _context.Departamentos.FirstOrDefaultAsync(d => d.Id == idDepartamento);
+    }
+
+    public async Task<List<Departamentos>> ObterDepartamentos()
+    {
+        return await _context.Departamentos.ToListAsync();
+    }
+
+    public async Task<int> ObterQuantidadeDepartamentos()
+    {
+        return await _context.Departamentos.CountAsync();
+    }
+}

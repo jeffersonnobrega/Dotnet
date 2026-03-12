@@ -71,6 +71,8 @@ public class AppDbContext : DbContext
         {
             entity.Property(p=> p.Id).ValueGeneratedOnAdd();
             entity.Property(p=> p.Nome).IsRequired().HasMaxLength(150);
+            entity.Property(p=> p.Alias).IsRequired();
+            entity.HasIndex(e => e.Alias).IsUnique();
             entity.HasIndex(p=> p.CodDepartamento).IsUnique();
         });
     }

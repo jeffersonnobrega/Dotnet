@@ -60,5 +60,7 @@ namespace Atendimento.Api.Controllers
             var resposta = await _ticketService.EditarStatusTicketAsync(ticketStatusUpdateDto);
             return resposta.Status ? Ok(resposta) : BadRequest(resposta);
         }
+
+      
     }
 }
