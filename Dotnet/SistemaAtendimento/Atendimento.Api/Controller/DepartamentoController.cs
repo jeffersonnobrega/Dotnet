@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Atendimento.Domain.Interfaces;
 using Atendimento.Domain.DTOs;
 using Atendimento.Domain.Enums;
+using Atendimento.Domain.Services;
 
 namespace Atendimento.Api.Controllers
 {
@@ -33,7 +34,15 @@ namespace Atendimento.Api.Controllers
             if (!resposta.Status) return NotFound(resposta);
             
             return Ok(resposta);
-        }    
+        }
+
+         [HttpGet("BuscarTodosDepartamentos")]
+        public async Task<IActionResult> BuscarTodosDepartamentos()
+        {
+            var resposta = await _departamentoService.ListarDepartamentosAsync();
+
+            return resposta.Status ? Ok(resposta) : BadRequest(resposta);
+        }       
 
 
       

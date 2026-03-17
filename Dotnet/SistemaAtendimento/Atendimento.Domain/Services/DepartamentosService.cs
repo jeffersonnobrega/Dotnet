@@ -1,30 +1,33 @@
 using Atendimento.Domain.DTOs;
 using Atendimento.Domain.Entities;
 using Atendimento.Domain.Interfaces;
+using AutoMapper;
 
 namespace Atendimento.Domain.Services;
 
 public class DepartamentosService : IDepartamentoService
 {
     public readonly IDepartamentoRepository _departamentoRepository;
+    private readonly IMapper _mapper;
 
-    public DepartamentosService(IDepartamentoRepository departamentoRepository)
+    public DepartamentosService(IDepartamentoRepository departamentoRepository, IMapper mapper)
     {
         _departamentoRepository = departamentoRepository;
+        _mapper = mapper;
     }
-   public async Task<Response<Departamentos>> CriarDepartamentoAsync(DepartamentoCreateDto departamentosCreateDto)
+   public async Task<Response<DepartamentoResponseDto>> CriarDepartamentoAsync(DepartamentoCreateDto departamentosCreateDto)
     {
-        Response<Departamentos> resposta = new Response<Departamentos>();
+        Response<DepartamentoResponseDto> resposta = new Response<DepartamentoResponseDto>();
 
     try
     {
         string aliasLimpo = departamentosCreateDto.Alias.Trim().ToUpper();
         
-        var quantidade = await _departamentoRepository.ObterQuantidadeDepartamentos();
+        var quantidade = await _departamentoRepository.ObterQuantidadeDepartamentosAsync();
         string codigoSugerido = $"{aliasLimpo}{(quantidade + 1).ToString().PadLeft(4, '0')}";
 
         // 3. Verifica se o código já existe (Causa Raiz: Evitar duplicidade)
-        var departamentoExistente = await _departamentoRepository.ObterDepartamentoPorCodEquipe(codigoSugerido);
+        var departamentoExistente = await _departamentoRepository.ObterDepartamentoPorCodEquipeAsync(codigoSugerido);
 
         if (departamentoExistente != null)
         {
@@ -41,11 +44,11 @@ public class DepartamentosService : IDepartamentoService
             CodDepartamento = codigoSugerido 
         };
 
-        await _departamentoRepository.AdicionarDepartamento(novoDepto);
+        await _departamentoRepository.AdicionarDepartamentoAsync(novoDepto);
 
         resposta.Status = true;
         resposta.Mensagem = "Departamento criado com sucesso.";
-        resposta.Dados = novoDepto;
+        resposta.Dados = _mapper.Map<DepartamentoResponseDto>(novoDepto);
         return resposta;
     }
     catch (Exception ex)
@@ -56,13 +59,13 @@ public class DepartamentosService : IDepartamentoService
     }
 }
 
-    public async Task<Response<Departamentos>> ListarDepartamentoPorCodEquipeAsync(string CodDepartamento)
+    public async Task<Response<DepartamentoResponseDto>> ListarDepartamentoPorCodEquipeAsync(string CodDepartamento)
     {
-        Response<Departamentos> resposta = new Response<Departamentos>();
+        var resposta = new Response<DepartamentoResponseDto>();
 
         try
         {
-            var departamento = await _departamentoRepository.ObterDepartamentoPorCodEquipe(CodDepartamento);
+            var departamento = await _departamentoRepository.ObterDepartamentoPorCodEquipeAsync(CodDepartamento);
 
             if (departamento == null)
             {
@@ -71,21 +74,25 @@ public class DepartamentosService : IDepartamentoService
                 return resposta;
             }
 
-                resposta.Mensagem = "Departamento localizado";
-                resposta.Status = true;
-                resposta.Dados = departamento;
+            resposta.Dados = new DepartamentoResponseDto
+            {
+                Id = departamento.Id,
+                Nome = departamento.Nome,
+                Alias = departamento.Alias,
+                CodDepartamento = departamento.CodDepartamento ?? string.Empty
+            };
 
-                return resposta;
-            
+            resposta.Mensagem = "Departamento localizado";
+            resposta.Status = true;
+            return resposta;
         }
         catch (Exception ex)
         {
-            
-            resposta.Mensagem = $"Erro ao buscar o Id: {ex.Message}";
+            resposta.Mensagem = $"Erro ao buscar o departamento: {ex.Message}";
             resposta.Status = false;
             return resposta;
         }
-    }
+}
 
     public async Task<Response<Departamentos>> ListarDepartamentoPorIdAsync(int Id)
     {
@@ -120,17 +127,30 @@ public class DepartamentosService : IDepartamentoService
 
     public async Task<Response<List<Departamentos>>> ListarDepartamentosAsync()
     {
-        Response<Departamentos> resposta = new Response<Departamentos>();
+        Response<List<Departamentos>> resposta = new Response<List<Departamentos>>();
 
         try
         {
-            var departamento = await _departamentoRepository.ObterDE
+            var departamentos = await _departamentoRepository.ObterDepartamentosAsync();
+
+            if (departamentos == null)
+            {
+                 resposta.Mensagem = "Departamentos não localizados";
+                 resposta.Status = false;
+                 return resposta;
+            }
+
+            resposta.Mensagem = "Departamentos localizados";
+            resposta.Dados = departamentos;
+            resposta.Status = true;
+                
+            return resposta;  
             
         }
         catch(Exception ex)
         {
             
-            resposta.Mensagem = $"Erro ao buscar o Id: {ex.Message}";
+            resposta.Mensagem = $"Erro ao buscar departamentos {ex.Message}";
             resposta.Status = false;
             return resposta;
         }

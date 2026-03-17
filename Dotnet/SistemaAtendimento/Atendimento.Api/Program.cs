@@ -19,6 +19,9 @@ builder.Services.AddDbContext<Atendimento.Infrastructure.Context.AppDbContext>(o
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IDepartamentoRepository, DepartamentosRepository>();
+builder.Services.AddScoped<IDepartamentoService, DepartamentosService>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 

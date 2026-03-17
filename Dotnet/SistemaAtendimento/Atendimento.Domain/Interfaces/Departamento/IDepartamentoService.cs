@@ -8,5 +8,5 @@ public interface IDepartamentoService
     Task<Response<Departamentos>>CriarDepartamentoAsync(DepartamentoCreateDto departamentosCreateDto);
     Task<Response<List<Departamentos>>>ListarDepartamentosAsync();
     Task<Response<Departamentos>>ListarDepartamentoPorIdAsync(int Id);
-    Task<Response<Departamentos>>ListarDepartamentoPorCodEquipeAsync(string CodDepartamento);
+    Task<Response<DepartamentoResponseDto>>ListarDepartamentoPorCodEquipeAsync(string CodDepartamento);
 }
